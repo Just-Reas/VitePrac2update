@@ -1,0 +1,297 @@
+@use '../mixins.scss' as *;
+@use '../variables.scss' as *;
+
+
+.home {
+    display: flex;
+    z-index: 1;
+
+    max-width: 100%;
+    min-height: 62.5rem;
+    width: 100%;
+
+    background-image: url('../../png/home__wallpaper.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    padding-top: 6.4375rem;
+
+    @media screen and (max-width: 576px) {
+        padding-top: 7.3125rem;
+        background-position: 90% center;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: end;
+        height: 100%;
+        width: 100%;
+
+        padding-bottom: 1.875rem;
+
+        @include flex-column;
+
+        @media screen and (max-width:1200px) {
+            padding-bottom: unset;
+        }
+    }
+
+
+    &__textblock {
+
+        @include flex-column;
+
+        &-first {
+            font-family: 'Saira', sans-serif;
+            font-weight: 600;
+            font-size: 4rem;
+            color: $white_color;
+
+            max-width: 55.5rem;
+            text-align: center;
+
+            @media screen and (max-width:1200px) {
+                font-size: calc(4rem * 0.9);
+            }
+
+            @media screen and (max-width:992px) {
+                margin-top: 7rem;
+                font-size: calc(4rem * 0.8);
+            }
+
+            @media screen and (max-width:768px) {
+                margin-top: 9rem;
+                font-size: calc(3rem * 0.8);
+            }
+
+            @media screen and (max-width:576px) {
+                margin-top: 5.8125rem;
+                font-size: 1.75rem;
+            }
+
+
+        }
+
+        &-second {
+            @include saira-font(normal, 1.25rem);
+
+            color: $white_color;
+
+            margin-top: 1.875rem;
+            max-width: 39.1875rem;
+            text-align: center;
+
+            @media screen and (max-width:768px) {
+                @include saira-font(normal, 1.25rem);
+                margin: 1.875rem 0;
+            }
+
+            @media screen and (max-width:768px) {
+                @include saira-font(normal, 1.1rem);
+                margin: 1.875rem 0;
+            }
+
+            @media screen and (max-width:768px) {
+                @include saira-font(normal, 1rem);
+                margin: 1.875rem 0;
+            }
+        }
+
+        &-button {
+            @include saira-font(600, 1.25rem);
+
+            display: flex;
+            border: .125rem solid rgba(226, 226, 226, 0.4);
+            background: rgba(226, 226, 226, 0.4);
+            backdrop-filter: blur(15px);
+            border-radius: .625rem;
+
+            color: $white_color;
+
+            padding: 1rem 5rem;
+            gap: .625rem;
+            margin-top: 3.875rem;
+            margin-bottom: 12.3125rem;
+
+            @media screen and (max-width:992px) {
+                margin-bottom: 6rem;
+            }
+
+            @media screen and (max-width:768px) {
+                margin-top: unset;
+                margin-bottom: 8rem;
+            }
+
+            @media screen and (max-width:768px) {
+                margin-top: unset;
+                margin-bottom: 9.9375rem;
+            }
+
+            @media screen and (max-width:768px) {
+                padding: .5625rem 2.1875rem;
+            }
+
+
+            &:hover {
+                color: rgba(226, 226, 226, 0.4);
+            }
+
+            &:active {
+                color: $black_color;
+                border: .125rem solid $gray_color;
+            }
+        }
+    }
+
+    &__board {
+        width: 100%;
+        display: flex;
+        background-color: $green_color;
+        border-radius: 1.25rem;
+
+        &-menu {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr minmax(auto, 180px) 1fr minmax(auto, 180px) 1fr minmax(auto, 180px) 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+
+            padding-top: 2.375rem;
+            padding-bottom: 2.3125rem;
+            padding-left: 6.9375rem;
+            padding-right: 6.9375rem;
+            @include flex-center;
+
+            @media screen and (max-width:1200px) {
+                padding-top: calc(2.375rem*0.8);
+                padding-bottom: calc(2.3125rem*0.8);
+                padding-left: calc(6.9375rem*0.8);
+                padding-right: calc(6.9375rem*0.8);
+            }
+
+            @media screen and (max-width:992px) {
+                display: grid;
+                grid-template-columns: 1fr minmax(auto, calc(1fr)) 1fr;
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 0rem;
+                grid-row-gap: 1.875rem;
+            }
+
+            @media screen and (max-width:576px) {
+                grid-row-gap: 3.75rem;
+            }
+
+            @media screen and (max-width:1200px) {
+                padding: 2.5rem 1.875rem;
+            }
+
+            @media screen and (max-width:768px) {
+                padding: 3.125rem 2.5rem;
+            }
+
+            @media screen and (max-width:768px) {
+                padding: 3rem 1.875rem;
+            }
+
+            &-item {
+                display: flex;
+
+                width: 100%;
+
+                color: $white_color;
+
+                @media screen and (max-width:992px) {
+                    padding-left: 0;
+                }
+
+                &:nth-child(1),
+                &:nth-child(5) {
+                    @media screen and (max-width:768px) {
+                        display: flex;
+                        justify-content: end;
+                    }
+                }
+
+                &:nth-child(3),
+                &:nth-child(7) {
+                    @media screen and (max-width:768px) {
+                        display: flex;
+                        justify-content: start;
+                    }
+                }
+
+                @media screen and (max-width:992px) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                &-linebox {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+
+                    &:nth-child(4) {
+                        @media screen and (max-width:992px) {
+                            display: none;
+                        }
+                    }
+
+
+                    &-line {
+                        width: .1rem;
+                        height: 5rem;
+                        background-color: $white_color;
+
+                        @media screen and (max-width:576px) {
+                            height: 3.75rem;
+                        }
+                    }
+                }
+
+                &-box {
+                    max-width: 7rem;
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    gap: .3125rem;
+                }
+
+                &-number {
+                    height: 100%;
+                    @include saira-font(600, 2.5rem);
+
+                    @media screen and (max-width:768px) {
+                        @include saira-font(600, 2rem);
+                    }
+
+                    @media screen and (max-width:576px) {
+                        @include saira-font(600, 1.5rem);
+                    }
+                }
+
+                &-description {
+                    height: 100%;
+                    @include saira-font(normal, 1.25rem);
+
+                    @media screen and (max-width:768px) {
+                        @include saira-font(600, 1rem);
+                        white-space: nowrap;
+                    }
+
+                    @media screen and (max-width:576px) {
+                        @include saira-font(600, 0.8rem);
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}

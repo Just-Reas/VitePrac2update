@@ -1,0 +1,109 @@
+@use '../mixins.scss' as *;
+@use '../variables.scss' as *;
+
+
+#header {
+    background: #000000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(.4375rem);
+}
+
+.header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    &__inner {
+        width: 100%;
+        padding: 1.4375rem 1.875rem;
+
+        @include flex-space;
+
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+            gap: .625rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 1.125rem;
+        }
+
+        @media screen and (max-width: 576px) {
+            flex-direction: unset;
+            display: flex;
+            justify-content: space-between;
+
+            padding: 1.875rem 0;
+            gap: 0rem;
+        }
+
+    }
+
+    &__logo {
+        height: 3.5625rem;
+
+        @include flex-center;
+
+        img {
+            width: 100%;
+            height: auto;
+
+            @media screen and (max-width:576px) {
+                max-width: 7.25rem;
+            }
+        }
+    }
+
+    &__menu {
+        gap: 4rem;
+        color: $white_color;
+
+        @include flex-center;
+
+        @media screen and (max-width: 992px) {
+            gap: 6rem;
+        }
+
+        @media screen and (max-width:768px) {
+            gap: 4.375rem;
+        }
+
+        @media screen and (max-width:576px) {
+            display: none;
+        }
+    }
+
+    &__item {
+        color: $white_color;
+        text-decoration: none;
+
+        font-family: 'Saira', sans-serif;
+        font-weight: normal;
+        font-size: 1rem;
+
+        @media screen and (max-width:992px) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__burger {
+
+        display: none;
+        color: $white_color;
+
+        @media screen and (max-width: 576px) {
+            display: flex;
+            height: auto;
+
+            max-width: 1.5rem;
+        }
+    }
+
+}
+
+.header.hide {
+    transform: translateY(-100%);
+}

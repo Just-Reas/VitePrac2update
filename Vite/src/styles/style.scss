@@ -1,0 +1,186 @@
+@use '../styles/mixins.scss' as *;
+@use '../styles/variables.scss' as *;
+
+@use '../styles/sections/header.scss';
+@use '../styles/sections/home.scss';
+@use '../styles/sections/about-first.scss';
+@use '../styles/sections/about-second.scss';
+@use '../styles/sections/about-third.scss';
+
+:root {
+    font-size: 16px;
+    --font-scale: 1;
+    font-family: 'Saira', sans-serif;
+
+    @media screen and (max-width:1200px){
+        --font-scale: 0.9;
+    }
+
+    @media screen and (max-width:576px){
+        --font-scale: 1;
+    }
+}
+
+.container{
+    width: 100%;
+    max-width: 77.5rem;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1400px){
+        padding: 0 15px;
+    }
+
+    @media screen and (max-width: 768px){
+        padding: 0 24px;
+    }
+    
+    @media screen and (max-width: 576px){
+        padding: 0 25px;
+    }
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-BlackItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-ExtraBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-ExtraBoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-BoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-ExtraLightItalic.woff2') format('woff2');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-ThinItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+

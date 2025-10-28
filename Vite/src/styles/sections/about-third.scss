@@ -1,0 +1,97 @@
+@use '../mixins.scss' as *;
+@use '../variables.scss' as *;
+
+.about-third {
+    &__inner {
+        display: flex;
+        padding: 4.375rem 0;
+
+        @media screen and (max-width: 576px) {
+            padding: 3.125rem 0;
+        }
+    }
+
+    &__thirdblock {
+        display: flex;
+        align-items: center;
+        gap: 7.25rem;
+
+        @media screen and (max-width:1200px) {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        &-txtblock {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: .625rem;
+
+            &-header {
+                @include saira-font(600, 2.5rem);
+                color: $black_color;
+                max-width: 34.875rem;
+                padding-top: 2.5625rem;
+                padding-bottom: 2.1875rem;
+
+                @media screen and (max-width:1200px) {
+                    width: 100%;
+                    padding: unset;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+
+                @media screen and (max-width:768px) {
+                    text-align: center;
+                }
+
+                @media screen and (max-width: 576px) {
+                    text-align: unset;
+                    @include saira-font(600, 1.5rem);
+                }
+            }
+
+            &-txt {
+                font-family: 'Saira', sans-serif;
+                font-weight: normal;
+                font-size: 1.25rem;
+
+                color: $black_color;
+                max-width: 35.625rem;
+
+                @media screen and (max-width:1200px) {
+                    width: 100%;
+                    max-width: unset;
+                    font-size: calc(1.25rem*0.9);
+                }
+
+                @media screen and (max-width:992px) {
+                    font-size: calc(1.25rem*0.9);
+                }
+
+                @media screen and (max-width:992px) {
+                    font-size: 0.875rem;
+                }
+            }
+        }
+
+        &-imgblock {
+            width: 100%;
+
+            img {
+                display: block;
+                max-width: 34.625rem;
+                width: 100%;
+                height: auto;
+
+                @media screen and (max-width:1200px) {
+                    max-width: 50rem;
+                    height: auto;
+                    margin: 0 auto;
+                }
+            }
+
+        }
+    }
+}
