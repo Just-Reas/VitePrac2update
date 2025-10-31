@@ -5,47 +5,20 @@
   font-size: calc(#{$size} * var(--font-scale));
 }
 
-@mixin flex-align($display: flex, $align: center){
-    display: $display;
+@mixin flex-layout(
+  $display: flex,
+  $direction: row,
+  $justify: null,
+  $align: null
+) {
+  display: $display;
+  flex-direction: $direction;
+  
+  @if $justify != null {
+    justify-content: $justify;
+  }
+  
+  @if $align != null {
     align-items: $align;
-}
-
-@mixin flex-center($display: flex, $justify: center, $align: center) {
-  display: $display;
-  justify-content: $justify;
-  align-items: $align;
-}
-
-@mixin flex-space($display: flex, $justify: space-between, $align: center) {
-  display: $display;
-  justify-content: $justify;
-  align-items: $align;
-}
-
-@mixin flex-space-short($display: flex, $justify: space-between) {
-  display: $display;
-  justify-content: $justify;
-}
-
-@mixin flex-column($display: flex, $flex: column, $align: center) {
-  display: $display;
-  flex-direction: $flex;
-  align-items: $align;
-}
-
-@mixin flex-column-short($display: flex, $flex: column) {
-  display: $display;
-  flex-direction: $flex;
-}
-
-@mixin flex-column-justify($display: flex, $flex: column, $justify: center) {
-  display: $display;
-  flex-direction: $flex;
-  justify-content: $justify;
-}
-
-@mixin flex-column-between($display: flex, $flex: column, $justify: space-between) {
-  display: $display;
-  flex-direction: $flex;
-  justify-content: $justify;
+  }
 }

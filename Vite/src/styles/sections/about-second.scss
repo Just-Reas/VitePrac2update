@@ -48,7 +48,7 @@
         }
 
         &-txt {
-            @include flex-column-between;
+            @include flex-layout($direction: column, $justify: space-between);
 
             @media screen and (max-width:768px) {
                 flex-direction: unset;
@@ -96,7 +96,7 @@
             &__lower {
                 gap: .625rem;
 
-                @include flex-align;
+                @include flex-layout($align: center);
 
                 @media screen and (max-width:768px) {
                     display: none;
@@ -126,7 +126,7 @@
                 height: 100%;
                 gap: 1.25rem;
 
-                @include flex-align;
+                @include flex-layout($align: center);
 
                 &-item {
                     display: flex;

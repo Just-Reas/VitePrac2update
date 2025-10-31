@@ -30,7 +30,7 @@
 
         padding-bottom: 1.875rem;
 
-        @include flex-column;
+         @include flex-layout($direction: column, $align: center);
 
         @media screen and (max-width:1200px) {
             padding-bottom: unset;
@@ -40,7 +40,7 @@
 
     &__textblock {
 
-        @include flex-column;
+        @include flex-layout($direction: column, $align: center);
 
         &-first {
             font-family: 'Saira', sans-serif;
@@ -162,7 +162,7 @@
             padding-bottom: 2.3125rem;
             padding-left: 6.9375rem;
             padding-right: 6.9375rem;
-            @include flex-center;
+            @include flex-layout($justify: center, $align: center);
 
             @media screen and (max-width:1200px) {
                 padding-top: calc(2.375rem*0.8);

@@ -77,20 +77,16 @@
         }
 
         &-imgblock {
+            display: block;
+            max-width: 34.625rem;
             width: 100%;
+            height: auto;
 
-            img {
-                display: block;
-                max-width: 34.625rem;
-                width: 100%;
-                height: auto;
-
-                @media screen and (max-width:1200px) {
+            @media screen and (max-width:1200px) {
                     max-width: 50rem;
                     height: auto;
                     margin: 0 auto;
                 }
-            }
 
         }
     }
